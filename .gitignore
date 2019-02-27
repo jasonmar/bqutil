@@ -5,3 +5,6 @@ venv
 *.gz
 *.tgz
 *.zip
+build
+dist
+*.egg-info

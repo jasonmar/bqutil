@@ -17,14 +17,11 @@ import os
 import setuptools
 
 
-name = 'bqutil'
-description = 'Utility to export BigQuery Jobs and Query Plans'
+name = 'bq-query-plan-exporter'
+description = 'BigQuery Query Plan Exporter'
 version = '0.1.0'
 release_status = 'Development Status :: 3 - Alpha'
-dependencies = [
-    'google-cloud-bigquery >= 1.9.0'
-]
-extras = {}
+dependencies = ['google-cloud-bigquery >= 1.9.0']
 
 
 # Setup boilerplate below this line.
@@ -54,13 +51,10 @@ setuptools.setup(
         'Topic :: Internet',
     ],
     platforms='Posix; MacOS X; Windows',
-    packages=['bqutil'],
+    packages=['bq'],
     install_requires=dependencies,
-    extras_require=extras,
     python_requires='>=3.4',
     include_package_data=True,
     zip_safe=False,
-    scripts=[
-        'bqutil/bqutil.py'
-    ]
+    scripts=['bq/bqexplain.py']
 )
